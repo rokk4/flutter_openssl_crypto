@@ -32,9 +32,26 @@ android {
     }
     defaultConfig {
         minSdkVersion 16
+
+        externalNativeBuild {
+            cmake {
+                arguments "-DANDROID_STL=c++_shared"
+            }
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+
+    buildFeatures {
+        prefab true
     }
 }
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "com.android.ndk.thirdparty:openssl:1.1.1g-alpha-1"
 }

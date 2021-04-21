@@ -1,5 +1,5 @@
 name: flutter_openssl_crypto
-description: A new flutter plugin project.
+description: libcrypto from OpenSSL for Android and iOS to be used with dart:ffi
 version: 0.0.1
 repository: https://gitlab.com/famedly/libraries/flutter_openssl_crypto
 

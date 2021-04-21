@@ -1,15 +1,8 @@
 # flutter_openssl_crypto
 
-A new flutter plugin project.
+This package provides libcrypto from OpenSSL for Android and iOS
+to be used with dart:ffi.
 
-## Getting Started
+Android Gradle Plugin 4.1 is required for Android.
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
+Currently, OpenSSL is included completely in iOS, but this isn't guaranteed.

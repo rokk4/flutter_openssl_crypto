@@ -1,3 +1,7 @@
+## 0.3.0
+- chore: upgrade Android project to latest gradle (The one with the braid)
+- ci: fix release pipeline (Karthikeyan S)
+
 ## 0.2.0
 chore: update openssl android dep to 1.1.1l-beta-1
 

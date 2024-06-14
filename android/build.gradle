@@ -2,14 +2,14 @@ group 'com.famedly.flutter_openssl_crypto'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.9.20'
+    ext.kotlin_version = '1.9.24'
     repositories {
         google()
         mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.1.4'
+        classpath 'com.android.tools.build:gradle:8.4.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -29,8 +29,6 @@ android {
         namespace 'com.famedly.flutter_openssl_crypto'
     }
 
-    compileSdkVersion 33
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -44,7 +42,8 @@ android {
         main.java.srcDirs += 'src/main/kotlin'
     }
     defaultConfig {
-        minSdkVersion 16
+        compileSdk 33
+        minSdkVersion 21
 
         externalNativeBuild {
             cmake {
@@ -67,7 +66,7 @@ android {
     }
 
     dependencies {
-        implementation "com.android.ndk.thirdparty:openssl:1.1.1l-beta-1"
+        implementation "com.android.ndk.thirdparty:openssl:1.1.1q-beta-1"
         testImplementation 'org.jetbrains.kotlin:kotlin-test'
         testImplementation 'org.mockito:mockito-core:5.7.0'
     }
